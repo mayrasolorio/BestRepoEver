@@ -1,25 +1,23 @@
-# Final Project: Repeat After Me
-
+# Final Project: Read My Mind
 ## Author
 Mayra Solorio
 
 ## What Does it Do?
-The game is similar to many “repeat after me” games, in which after something is done or said, you must copy the action. In this CPX game, LEDs will light up in a specific order, and similarly, you will have to repeat as the LEDs have lit up. The game will test memorization of the player by touching one of the four sections of the board in which the LEDs have lit up, and can be won by memorizing a pattern of 15 random LEDs while touching the capacitance sensors attached to those LEDs in the right order so that the capacitance breaks 950. 
+The game is similar to many “repeat after me” games, in which after something is done or said, you must copy the action. In this CPX game, there are four regions of the board, each with different colored LEDs and different capacitator inputs. The focus of the game is to keep 4 fingers on the capacitators and only let go of one when you're switching the LED for your next pattern. The goal is to not lift off your finger from the next LED that will play as this will cause a long beep and you will lose the game. You can start over by moving the switches position once again. 
 
 ## Inputs and Outputs
-The 4 main inputs of the game are the four main capacitance sensors in each corner of the board that are attached to the 4 sections of LED colors in the game. The first input is sensor  A3 and is connected to the red LED outputs. The second input is sensor A1 and is connected to the green LED outputs. The third input is sensor A7 and is connected to the yellow LED outputs; And the last input is sensor A4 and is connected to the blue LED outputs. There are also 2 other outputs which use sound. One will be the losing sound that plays after a mistake is made and before the game resets, and the second is the celebratory sound which will play after all 15 levels have been passed. 
+The 4 main inputs of the game are the four capacitance sensors in each corner of the board that are attached to the 4 sections of LED colors in the game. The first input is pin A5 and is connected to the red LED output and "region 1" of the board, or the top left corner. Moving counter-clockwise, the second input is pin A6 and is connected to the blue LED outputs and "region 2" of the board, or the bottom left corner. The third input is pin A7 and is connected to the green LED outputs and "region 3" of the board, or the bottom right corner; And the last input is sensor A4 and is connected to the blue LED outputs. The other important input in this game is the switch on D7. The switch is going to allow for an LED to light up after it has been moved so that you can continue the game. 
+All LEDs are used as outputs in this game, with four different colors appearing on the board. LEDs 0-2 appear as red, LEDs 2-4 appearing as blue, LEDs 5-7 appearing as green, and finally LEDs 7-9 appearing as yellow. There is also a few sound outputs in the game. Each region is associated with a note played through the CPX board's tone feature. The notes range from a C4 to an F4 increasing in note for every region. If at any point you make an incorrect guess, the board will play a long beep in the note of that region, signaling that you have lost. Similarly to the losing sounds, there is also a speech output that will enunciate the words "correct", after every correct answer. 
 
 ## Player Instructions
-1. Carefully watch for the LED pattern of length one when the game begins. 
-2. Hold the capacitance sensor that corresponds to the LEDs that just lit up, no more than a few seconds after the LEDs turn off. 
-3. Carefully watch for the next LED pattern that will be the last LED that lit up, and one more additional light after it. 
-4. Hold the capacitance sensor that corresponds to the first LED that lit up and then the second one with no more than a few seconds in between.
-5. Repeat these steps of watching the LEDs and holding the capacitance sensors in the same order, until you have reached a pattern length of    15.
-6. After this, begin the game from step 1 again, watching for a single LED light sequence. 
+1. Place 4 fingers on the board, one on each of the capacitator pins (A1, A2, A5, and A6). 
+2. With one finger, slide the switch to begin. (Attempt to guess the next light that is going to light up, so that you don't lift that finger up).
+3. Continue placing all fingers on the board, moving the switch with one, until you lose. You will know you lose when there is a pause and a long beep. Or else, nothing will happen and you can move the switch after about 2 seconds.
 
 
 ## Rules of the Game
-The capacitance of the section must break 950 out of the possible 1016. This can be done by simply touching the sensors in the area. 
-You must touch the sensors within a few seconds, leaving little room to think about your next move, truly testing memorization skills. 
-The game starts at Level 1, in which one fourth of the LEDs will light up a certain color on the CPX board. After that color is lit up you must then press the capacitance sensors of that section within a few seconds. If the capacitance sensors do not detect that the area was pressed then all the LEDs will light up red and you will hear a losing sound. If the capacitance for the area is detected, then the CPX board will repeat the same lights that were just on, plus one more set. As long as the capacitance is detected for each pattern that the LEDs light up in, then the game will continue to add one extra LED to the existing pattern. The game will continue until the pattern is 15 random LED lights that you must touch in the exact order, with little time in between to remember. If the LED pattern of 15 is done correctly, all the LED lights will light up green and a celebratory noise will play. The game will restart from the beginning after that.
+The capacitance of the section must break 700 out of the possible 1016. This can be done by simply touching the sensor. 
+You must use one finger to move the switch, you can lift more for more of a challenge, although this starts to get difficult as the LEDs that light up next are randomized and there is no pattern to follow.  
+If the capacitance sensor does not detect capacitance on the board, then a beep with no light will play and you have lost. You can restart after a bit by moving the switch. 
+The game's objective is simple: Try to guess where the next LED region will light up, and don't lift your finger from there. 
 
