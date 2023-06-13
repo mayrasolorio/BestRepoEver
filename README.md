@@ -21,3 +21,6 @@ You must use one finger to move the switch, you can lift more for more of a chal
 If the capacitance sensor does not detect capacitance on the board, then a beep with no light will play and you have lost. You can restart after a bit by moving the switch. 
 The game's objective is simple: Try to guess where the next LED region will light up, and don't lift your finger from there. 
 
+## Contact Information
+For questions about any of the above, or the code, you can email me at mayrasolorio03@gmail.com
+
